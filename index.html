@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <script>
+        // A single combined pool of all 32 URLs (Green + Discount, Arabic + English)
+        const urlPool = [
+            // === GREEN POOL ===
+            // Arabic
+            "https://forms.gle/8KuXNmAfHSLPwsDd6",
+            "https://forms.gle/JXojMEWwz1WXUxZ87",
+            "https://forms.gle/iiRYFK8fMqNTkvk89",
+            "https://forms.gle/S2G8MCpEMxZHMqKZ8",
+            "https://forms.gle/W9hMWFhGraEwquSy6",
+            "https://forms.gle/J6JPbSFvYSZS9oT26",
+            "https://forms.gle/kY1z6Ejhes9WiVcT8",
+            "https://forms.gle/wBXJvz3rxcjjG9DK9",
+            // English
+            "https://forms.gle/vkwb8r8xh4nNLHkt6",
+            "https://forms.gle/4942A1CnGCWXQ653A",
+            "https://forms.gle/Lm3XAF3K22zdZ56A7",
+            "https://forms.gle/SxzdVuEnUU4ckcL7",
+            "https://forms.gle/B2tKTcfNns5XSzSU9",
+            "https://forms.gle/GqW7LqWnTnFZAajcA",
+            "https://forms.gle/FwhzNL5h9gsHxHw87",
+            "https://forms.gle/8HtGfEEuXiqTCRcC8",
+
+            // === DISCOUNT POOL ===
+            // Arabic
+            "https://forms.gle/hu1UcoDQ1mAksj598",
+            "https://forms.gle/Aud2Lw6KjRtkWRr28",
+            "https://forms.gle/kZP55niNqjxiwAJ6",
+            "https://forms.gle/2RT3uRe3bdzuVbuR8",
+            "https://forms.gle/PzHgaTYPFaa1f3T98",
+            "https://forms.gle/TnJ1E9jwVcXUKomJA",
+            "https://forms.gle/VLD7Jj6eU229v8ZT9",
+            "https://forms.gle/5jjMhmpi2iJijDV8A",
+            // English
+            "https://forms.gle/VoQf3DBeGGqeaSgz8",
+            "https://forms.gle/H55KHDkZKF3NWdvg8",
+            "https://forms.gle/o18GsDm7JMipu4US6",
+            "https://forms.gle/QHgLcSK2bhTTSAQd7",
+            "https://forms.gle/oUQ8ivMzbVrmYQra8",
+            "https://forms.gle/HPgCq8jnPzMBDZVt8",
+            "https://forms.gle/Bq9H47CKqbiYGThj8",
+            "https://forms.gle/P3mSfY9VDQdehHF96"
+        ];
+
+        function redirectToRandom() {
+            // Pick an index from 0 to 31 completely at random
+            const randomIndex = Math.floor(Math.random() * urlPool.length);
+            const targetUrl = urlPool[randomIndex];
+            
+            // Instantly bounce the browser to the chosen form
+            window.location.replace(targetUrl);
+        }
+
+        // Run the function as soon as the script loads
+        window.onload = redirectToRandom;
+    </script>
+</head>
+<body style="background: #121212; color: #ffffff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="text-align: center;">
+        <h2>Connecting to your destination...</h2>
+        <p style="color: #888;">Please wait a moment.</p>
+    </div>
+</body>
+</html>
